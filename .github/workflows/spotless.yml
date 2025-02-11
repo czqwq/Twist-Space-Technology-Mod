@@ -2,10 +2,9 @@ name: Spotless Check
 
 on:
   pull_request:
-    branches:: [ master, main ]
+    branches: [ master, main ]
   push:
     branches: [ master, main ]
-
 jobs:
   spotless:
     runs-on: ubuntu-latest
