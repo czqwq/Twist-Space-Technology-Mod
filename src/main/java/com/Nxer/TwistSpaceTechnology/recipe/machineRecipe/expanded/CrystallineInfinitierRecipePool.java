@@ -76,12 +76,20 @@ public class CrystallineInfinitierRecipePool implements IRecipePool {
             .duration(20 * 144)
             .addTo(CI);
         // endregion
+        // region Lapotron circuit
+        // Shard
+        GTValues.RA.stdBuilder()
+            .itemInputs(GTCMItemList.PerfectLapotronCrystal.get(1))
+            .itemOutputs(GTCMItemList.LapotronShard.get(64))
+            .eut(RECIPE_UV)
+            .duration(20 * 5)
+            .addTo(HM);
 
         // Growth
         GTValues.RA.stdBuilder()
             .itemInputs(GTCMItemList.LapotronShard.get(1), MaterialPool.HolmiumGarnet.get(OrePrefixes.dust, 8))
             .fluidInputs(Materials.VibrantAlloy.getMolten(144 * 2))
-            .itemOutputs(GTCMItemList.PerfectLapotronCrystal.get(1))
+            .itemOutputs(GTCMItemList.PerfectLapotronCrystal.get(64))
             .eut(RECIPE_UHV)
             .duration(20 * 30)
             .addTo(CI);
@@ -103,8 +111,8 @@ public class CrystallineInfinitierRecipePool implements IRecipePool {
 
         //Crystal
         GTValues.RA.stdBuilder()
-            .itemInputs(GTCMItemList.PerfectLapotronCrystal.get(0), MaterialPool.HolmiumGarnet.get(OrePrefixes.dust, 512))
-            .fluidInputs(Materials.VibrantAlloy.getMolten(144 * 128))
+            .itemInputs(GTCMItemList.PerfectLapotronCrystal.get(0), MaterialPool.HolmiumGarnet.get(OrePrefixes.dust, 8))
+            .fluidInputs(Materials.VibrantAlloy.getMolten(144 * 2))
             .itemOutputs(GTCMItemList.PerfectLapotronCrystal.get(1))
             .eut(RECIPE_UIV)
             .duration(20 * 30)
@@ -263,10 +271,10 @@ public class CrystallineInfinitierRecipePool implements IRecipePool {
             .addTo(HM);
 
         GTValues.RA.stdBuilder()
-            .itemInputs(GTCMItemList.PerfectEnergyCrystal.get(0), ItemList.IC2_Energium_Dust.get(64 * 64))
-            .fluidInputs(Materials.EnergeticAlloy.getMolten(144 * 128))
-            .itemOutputs(GTCMItemList.PerfectLapotronCrystal.get(1))
-            .eut(RECIPE_UIV)
+            .itemInputs(GTCMItemList.PerfectEnergyCrystal.get(0), ItemList.IC2_Energium_Dust.get(64))
+            .fluidInputs(Materials.EnergeticAlloy.getMolten(144 * 2))
+            .itemOutputs(GTCMItemList.PerfectEnergyCrystal.get(1))
+            .eut(RECIPE_UEV)
             .duration(20 * 30)
             .addTo(CI);
         
