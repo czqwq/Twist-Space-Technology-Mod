@@ -235,7 +235,7 @@ public class Config {
     public static int SpeedMultiplier_CrystallineInfinitierMode_CrystallineInfinitier = 1;
     public static int ParallelMultiplier_CrystallineInfinitier = 1;
     public static byte FieldTier_EnablePerfectOverclock_CrystallineInfinitier = 3;
-    public static boolean PerfectCrystalRecipeNonCyclized = false;
+    public static boolean PerfectCrystalRecipeNonCyclized = true;
     // endregion
 
     // region Scavenger
